@@ -135,6 +135,17 @@ class InternalServerError extends CustomError {
   }
 }
 
+class BadGatewayError extends CustomError {
+  constructor(message: string | null, originalError?: Error) {
+    super(
+      message || "Bad Gateway.",
+      StatusCodes.BAD_GATEWAY,
+      ErrorName.badGateway,
+      originalError,
+    );
+  }
+}
+
 type AppCustomErrorConstructor =
   | typeof ValidationError
   | typeof NotFoundError
@@ -145,6 +156,7 @@ type AppCustomErrorConstructor =
   | typeof ForbiddenError
   | typeof ConflictError
   | typeof BadRequestError
+  | typeof BadGatewayError
   | typeof InternalServerError;
 
 export type { AppCustomErrorConstructor };
@@ -161,4 +173,5 @@ export {
   ConflictError,
   BadRequestError,
   InternalServerError,
+  BadGatewayError,
 };
