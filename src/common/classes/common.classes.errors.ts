@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import { ErrorName } from "../enums/common.enums.error-names";
+import { ErrorName } from "../enums/common.enums.error-names.js";
 
 abstract class CustomError extends Error {
   status: StatusCodes;
@@ -94,7 +94,7 @@ class ForbiddenError extends CustomError {
   constructor(message: string | null, originalError?: Error) {
     super(
       message ||
-        "You don't have the neccesary permissions to perfom this action.",
+      "You don't have the neccesary permissions to perfom this action.",
       StatusCodes.FORBIDDEN,
       ErrorName.forbidden,
       originalError,

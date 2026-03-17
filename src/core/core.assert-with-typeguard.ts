@@ -1,5 +1,5 @@
-import { ErrorName } from "../common/enums/common.enums.error-names";
-import getErrorConstructor from "../common/helpers/helpers.get-error-constructor";
+import { ErrorName } from "../common/enums/common.enums.error-names.js";
+import getErrorConstructor from "../common/helpers/helpers.get-error-constructor.js";
 
 function assertWithTypeguard<T, V>(
   value: V,

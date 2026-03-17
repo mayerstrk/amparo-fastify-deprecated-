@@ -1,4 +1,4 @@
-const enum ErrorName {
+declare enum ErrorName {
   badRequest = "badrequesterror",
   validation = "validationerror",
   notFound = "notfounderror",

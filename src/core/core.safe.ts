@@ -1,5 +1,5 @@
-import { ErrorName } from "../common";
-import getErrorConstructor from "../common/helpers/helpers.get-error-constructor";
+import { ErrorName } from "../common/index.js";
+import getErrorConstructor from "../common/helpers/helpers.get-error-constructor.js";
 
 /**
  * Function overloads for `safe`.

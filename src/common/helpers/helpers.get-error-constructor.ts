@@ -1,4 +1,4 @@
-import { ErrorName } from "../enums/common.enums.error-names";
+import { ErrorName } from "../enums/common.enums.error-names.js";
 import {
   ValidationError,
   NotFoundError,
@@ -11,8 +11,8 @@ import {
   ConflictError,
   type AppCustomErrorConstructor,
   BadRequestError,
-} from "../classes/common.classes.errors";
-import { assertUnreachable } from "../utils/common.utils.assert-unreachable";
+} from "../classes/common.classes.errors.js";
+import { assertUnreachable } from "../utils/common.utils.assert-unreachable.js";
 
 function getErrorConstructor(errorName: ErrorName): AppCustomErrorConstructor {
   switch (errorName) {
