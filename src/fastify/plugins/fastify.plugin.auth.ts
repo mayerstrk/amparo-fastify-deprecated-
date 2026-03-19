@@ -1,11 +1,11 @@
-import fastify, { FastifyInstance, FastifyRequest } from "fastify";
+import { FastifyInstance, FastifyRequest } from "fastify";
 import fp from "fastify-plugin";
-import { ErrorName } from "../../common";
-import { assert } from "../../core/core.assert";
 import cookie from "@fastify/cookie";
-import { safe } from "../../core";
+import { ErrorName } from "../../common/index.js";
+import { assert } from "../../core/core.assert.js";
+import { safe } from "../../core/index.js";
 
-const enum AuthenticationMethod {
+declare enum AuthenticationMethod {
   cookieJwt = "cookieJwt",
   bearer = "bearer",
   xApiKey = "xApiKey",
@@ -81,11 +81,11 @@ async function authPluginFn<
 
 async function authPluginFn<
   Options extends
-    | NotEmpty<Record<string, unknown> & { jwtCookieName?: string }>
-    | never,
+  | NotEmpty<Record<string, unknown> & { jwtCookieName?: string }>
+  | never,
   OptionsForGetRequestByAuthMethodHelper extends
-    | NotEmpty<Record<string, unknown>>
-    | never,
+  | NotEmpty<Record<string, unknown>>
+  | never,
   RequestUser extends { id: string } = { id: string },
 >(
   fastify: FastifyInstance,

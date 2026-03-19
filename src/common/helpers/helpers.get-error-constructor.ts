@@ -1,4 +1,4 @@
-import { ErrorName } from "../enums/common.enums.error-names";
+import { ErrorName } from "../enums/common.enums.error-names.js";
 import {
   ValidationError,
   NotFoundError,

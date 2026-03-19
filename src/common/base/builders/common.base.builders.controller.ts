@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply, RouteHandlerMethod } from "fastify";
-import { type BaseAppRequest } from "../types/common.base.types.requests";
+import { type BaseAppRequest } from "../types/common.base.types.requests.js";
 
 // Controller Types
 type BaseControllerHelper<
