@@ -9,6 +9,7 @@ declare enum ErrorName {
   internalServerError = "internalservererror",
   forbidden = "forbiddenerror",
   conflict = "conflicterror",
+  badGateway = "badgatewayerror",
 }
 
 export { ErrorName };
