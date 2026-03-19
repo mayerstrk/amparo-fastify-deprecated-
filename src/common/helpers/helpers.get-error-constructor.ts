@@ -11,6 +11,7 @@ import {
   ConflictError,
   type AppCustomErrorConstructor,
   BadRequestError,
+  BadGatewayError,
 } from "../classes/common.classes.errors";
 import { assertUnreachable } from "../utils/common.utils.assert-unreachable";
 
@@ -54,6 +55,10 @@ function getErrorConstructor(errorName: ErrorName): AppCustomErrorConstructor {
 
     case ErrorName.internalServerError: {
       return InternalServerError;
+    }
+
+    case ErrorName.badGateway: {
+      return BadGatewayError;
     }
 
     default: {
